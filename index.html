@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         /* ==========================================================================
@@ -76,6 +78,20 @@
         img, svg { max-width: 100%; display: block; }
         
         .mono { font-family: 'JetBrains Mono', monospace; }
+
+        /* FontAwesome Adjustments */
+        i[class^="fa-"] {
+            margin-right: 6px;
+        }
+        .platform-pill i {
+            color: var(--green);
+            font-size: 1.2em;
+        }
+        .pricing-table-full td i {
+            color: var(--text-muted);
+            width: 20px;
+            text-align: center;
+        }
 
         /* ==========================================================================
            UTILITIES & LAYOUT
@@ -380,7 +396,7 @@
         .pricing-table-full td:last-child { color: var(--green); font-family: 'JetBrains Mono', monospace; font-weight: 700; }
 
         .payment-methods { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-        .pay-pill { background: var(--surface); border: 1px solid var(--border); padding: 12px 24px; border-radius: 8px; font-weight: 600; color: var(--text); }
+        .pay-pill { background: var(--surface); border: 1px solid var(--border); padding: 12px 24px; border-radius: 8px; font-weight: 600; color: var(--text); display: flex; align-items: center; gap: 8px; }
 
         /* Countries Page */
         .region-block { margin-bottom: 60px; }
@@ -554,7 +570,7 @@
                 <div class="container grid-2">
                     <div class="fade-in">
                         <div style="margin-bottom: 24px;">
-                            <span style="background: var(--green-dim); border: 1px solid var(--border-green); padding: 6px 14px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--green);">⚡ 200+ Countries · 600+ Platforms · Instant Delivery</span>
+                            <span style="background: var(--green-dim); border: 1px solid var(--border-green); padding: 6px 14px; border-radius: 20px; font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 13px; color: var(--green);"><i class="fa-solid fa-bolt"></i> 200+ Countries · 600+ Platforms · Instant Delivery</span>
                         </div>
                         <h1>The Fastest<br><span class="text-green">SMS Active</span><br>Verification Service</h1>
                         <p class="hero-desc">Get a virtual phone number from any country in seconds. SMS Active delivers OTP codes instantly for WhatsApp, Telegram, Google, Facebook, and 600+ other platforms — with the highest success rates in the industry. No SIM card. No contract. Just instant verification.</p>
@@ -563,10 +579,10 @@
                             <button class="btn btn-ghost" onclick="showSection('pricing')">View Pricing</button>
                         </div>
                         <div class="hero-trust">
-                            <span>🔒 No SIM Required</span>
-                            <span>✓ Auto-Refund on Failure</span>
-                            <span>⚡ Receive in Seconds</span>
-                            <span>🌍 200+ Countries</span>
+                            <span><i class="fa-solid fa-lock"></i> No SIM Required</span>
+                            <span><i class="fa-solid fa-check"></i> Auto-Refund on Failure</span>
+                            <span><i class="fa-solid fa-bolt"></i> Receive in Seconds</span>
+                            <span><i class="fa-solid fa-globe"></i> 200+ Countries</span>
                         </div>
                     </div>
                     
@@ -594,7 +610,7 @@
                             
                             <div class="w-row">
                                 <div style="display: flex; align-items: center; gap: 12px;">
-                                    <div style="width: 32px; height: 32px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--bg); font-size: 18px;">💬</div>
+                                    <div style="width: 32px; height: 32px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--bg); font-size: 18px;"><i class="fa-brands fa-whatsapp" style="margin: 0;"></i></div>
                                     <span style="font-family: 'DM Sans', sans-serif; font-weight: 600; color: var(--white);">WhatsApp</span>
                                 </div>
                                 <div style="font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--green);">$0.15</div>
@@ -605,7 +621,7 @@
                                 <div class="mono" style="font-size: 18px; color: var(--white); font-weight: 700; margin-bottom: 8px;">Your WhatsApp code is 847-291</div>
                                 <div style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px;">Just now · +1 (555) 847-2910</div>
                                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                                    <div style="color: var(--green); font-size: 13px; font-weight: 600;">✓ Delivered</div>
+                                    <div style="color: var(--green); font-size: 13px; font-weight: 600;"><i class="fa-solid fa-check"></i> Delivered</div>
                                     <button style="border: 1px solid var(--border-green); background: rgba(0,255,136,0.1); color: var(--green); padding: 6px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; cursor: pointer;">Copy Code</button>
                                 </div>
                             </div>
@@ -652,21 +668,21 @@
                     
                     <div class="feature-stack fade-in">
                         <div class="f-card">
-                            <div class="f-icon green">📱</div>
+                            <div class="f-icon green"><i class="fa-solid fa-mobile-screen" style="margin: 0;"></i></div>
                             <div>
                                 <h4>Real SIM & Virtual Numbers</h4>
                                 <p>We dynamically route your request to either real physical SIM cards or premium virtual numbers based on platform security requirements.</p>
                             </div>
                         </div>
                         <div class="f-card">
-                            <div class="f-icon blue">⚡</div>
+                            <div class="f-icon blue"><i class="fa-solid fa-bolt" style="margin: 0;"></i></div>
                             <div>
                                 <h4>Sub-20 Second Delivery</h4>
                                 <p>Our direct carrier connections ensure that OTP codes arrive in your dashboard almost instantly, completely eliminating timeout failures.</p>
                             </div>
                         </div>
                         <div class="f-card">
-                            <div class="f-icon green">🛡️</div>
+                            <div class="f-icon green"><i class="fa-solid fa-shield-halved" style="margin: 0;"></i></div>
                             <div>
                                 <h4>Auto-Refund Guarantee</h4>
                                 <p>If a verification code doesn't arrive within the activation window for any reason, your account balance is automatically refunded. No questions asked.</p>
@@ -720,39 +736,39 @@
                     </div>
                     
                     <div class="platform-row fade-in">
-                        <div class="platform-pill">💬 WhatsApp</div>
-                        <div class="platform-pill">✈️ Telegram</div>
-                        <div class="platform-pill">🔵 Facebook</div>
-                        <div class="platform-pill">📸 Instagram</div>
-                        <div class="platform-pill">🎵 TikTok</div>
-                        <div class="platform-pill">🤖 Google/Gmail</div>
-                        <div class="platform-pill">💬 Discord</div>
-                        <div class="platform-pill">🤖 OpenAI/ChatGPT</div>
-                        <div class="platform-pill">🐦 Twitter/X</div>
-                        <div class="platform-pill">📦 Amazon</div>
-                        <div class="platform-pill">🎵 Spotify</div>
-                        <div class="platform-pill">📺 Netflix</div>
+                        <div class="platform-pill"><i class="fa-brands fa-whatsapp"></i> WhatsApp</div>
+                        <div class="platform-pill"><i class="fa-brands fa-telegram"></i> Telegram</div>
+                        <div class="platform-pill"><i class="fa-brands fa-facebook"></i> Facebook</div>
+                        <div class="platform-pill"><i class="fa-brands fa-instagram"></i> Instagram</div>
+                        <div class="platform-pill"><i class="fa-brands fa-tiktok"></i> TikTok</div>
+                        <div class="platform-pill"><i class="fa-brands fa-google"></i> Google/Gmail</div>
+                        <div class="platform-pill"><i class="fa-brands fa-discord"></i> Discord</div>
+                        <div class="platform-pill"><i class="fa-solid fa-robot"></i> OpenAI/ChatGPT</div>
+                        <div class="platform-pill"><i class="fa-brands fa-x-twitter"></i> Twitter/X</div>
+                        <div class="platform-pill"><i class="fa-brands fa-amazon"></i> Amazon</div>
+                        <div class="platform-pill"><i class="fa-brands fa-spotify"></i> Spotify</div>
+                        <div class="platform-pill"><i class="fa-solid fa-film"></i> Netflix</div>
                     </div>
                     
                     <div class="platform-row fade-in" style="margin-bottom: 32px;">
-                        <div class="platform-pill small">LinkedIn</div>
-                        <div class="platform-pill small">Viber</div>
-                        <div class="platform-pill small">Signal</div>
-                        <div class="platform-pill small">Uber</div>
-                        <div class="platform-pill small">Airbnb</div>
-                        <div class="platform-pill small">PayPal</div>
-                        <div class="platform-pill small">eBay</div>
-                        <div class="platform-pill small">Tinder</div>
-                        <div class="platform-pill small">Bumble</div>
-                        <div class="platform-pill small">Badoo</div>
-                        <div class="platform-pill small">ProtonMail</div>
-                        <div class="platform-pill small">Outlook</div>
-                        <div class="platform-pill small">Microsoft</div>
-                        <div class="platform-pill small">Apple ID</div>
-                        <div class="platform-pill small">Binance</div>
-                        <div class="platform-pill small">Coinbase</div>
-                        <div class="platform-pill small">Shopify</div>
-                        <div class="platform-pill small">Stripe</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-linkedin"></i> LinkedIn</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-viber"></i> Viber</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-comment-dots"></i> Signal</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-uber"></i> Uber</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-airbnb"></i> Airbnb</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-paypal"></i> PayPal</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-ebay"></i> eBay</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-fire"></i> Tinder</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-heart"></i> Bumble</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-user-group"></i> Badoo</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-envelope"></i> ProtonMail</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-microsoft"></i> Outlook</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-microsoft"></i> Microsoft</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-apple"></i> Apple ID</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-coins"></i> Binance</div>
+                        <div class="platform-pill small"><i class="fa-solid fa-wallet"></i> Coinbase</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-shopify"></i> Shopify</div>
+                        <div class="platform-pill small"><i class="fa-brands fa-stripe"></i> Stripe</div>
                     </div>
                     
                     <a class="fade-in" style="color: var(--green); font-weight: 600; font-size: 15px;" onclick="showSection('platforms')">View all 600+ supported platforms →</a>
@@ -793,15 +809,15 @@
 
                         <div class="side-feat-stack">
                             <div class="side-feat-card">
-                                <h4>🌍 200+ Countries</h4>
+                                <h4><i class="fa-solid fa-globe"></i> 200+ Countries</h4>
                                 <p>True global coverage. Access numbers from North America, Europe, Asia, LATAM, and emerging markets where local verification is often required to bypass regional restrictions.</p>
                             </div>
                             <div class="side-feat-card">
-                                <h4>💻 Full API Access</h4>
+                                <h4><i class="fa-solid fa-code"></i> Full API Access</h4>
                                 <p>Automate your verification workflows entirely. Our RESTful API provides endpoints for checking inventory, purchasing numbers, and retrieving SMS codes programmatically.</p>
                             </div>
                             <div class="side-feat-card">
-                                <h4>🔒 Zero Personal Data Required</h4>
+                                <h4><i class="fa-solid fa-user-secret"></i> Zero Personal Data Required</h4>
                                 <p>Privacy is our priority. You don't need to provide ID, upload documents, or link your real phone number to use SMS Active. Register with just an email address and pay with crypto for maximum anonymity.</p>
                             </div>
                         </div>
@@ -926,8 +942,8 @@
                         <div class="price-card">
                             <div class="price-card-header">
                                 <div class="p-label" style="color: var(--text-muted);">NUMBER RENTAL</div>
-                                <div class="p-val">From $0.50</div>
-                                <div class="p-sub">/day</div>
+                                <div class="p-val">From $0.25</div>
+                                <div class="p-sub">/ 4 hours</div>
                             </div>
                             <ul class="p-list">
                                 <li>✓ 4 hours to 30 days</li>
@@ -1066,23 +1082,23 @@
 
                 <div class="grid-2 fade-in">
                     <div class="card">
-                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);">Virtual Phone Numbers</h3>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);"><i class="fa-solid fa-mobile-screen"></i> Virtual Phone Numbers</h3>
                         <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">SMS Active provides instant virtual phone numbers from 200+ countries — no physical SIM card, no carrier contract, and no personal information required. A virtual number is a real, working phone number provisioned from our verified inventory that receives SMS messages just like a physical number would, but exists entirely in the cloud. When you purchase a virtual number through SMS Active, it is assigned exclusively to your account for the duration of your session — no other user can access it or receive its messages simultaneously. Virtual numbers are available for hundreds of country and service combinations, refreshed continuously from our supplier network to ensure you always receive a clean, unblacklisted number. They are ideal for one-time account verification, testing, privacy protection, and any use case where exposing your real personal phone number carries risk. Virtual number prices start from $0.10 and vary by country and target service.</p>
                     </div>
                     <div class="card">
-                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);">Single SMS Verification</h3>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);"><i class="fa-solid fa-comment-sms"></i> Single SMS Verification</h3>
                         <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">Our core service. Get a single-use virtual phone number to receive an SMS verification code for a specific app or website. You select the country and the service, we provide a number. The number remains active for a 20-minute window, giving you ample time to request and receive the code. Because these are freshly provisioned numbers, our success rate is incredibly high. If the code does not arrive within the window, our system automatically cancels the transaction and refunds the cost directly to your balance. Perfect for setting up new accounts without exposing your personal phone number.</p>
                     </div>
                     <div class="card">
-                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);">Number Rental</h3>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--green);"><i class="fa-solid fa-clock-rotate-left"></i> Number Rental</h3>
                         <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">For users who need to maintain an identity over time. Rent a dedicated virtual phone number for periods ranging from 4 hours up to 30 days. During your rental period, this number is yours exclusively. You can receive an unlimited amount of SMS messages from any sender (unlike single verification, which is locked to one specific service). This is the ideal solution for accounts that require periodic Two-Factor Authentication (2FA) codes to log in, or for testing multi-step registration flows. If no SMS is received in the first 20 minutes, you can cancel the rental for a full refund.</p>
                     </div>
                     <div class="card">
-                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--blue);">Bulk Verification & API</h3>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--blue);"><i class="fa-solid fa-code"></i> Bulk Verification & API</h3>
                         <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">Designed for developers, growth teams, and enterprise users. SMS Active provides a comprehensive, RESTful API that allows you to integrate our entire number provisioning infrastructure into your own software. Automate the process of checking inventory, purchasing numbers, and retrieving SMS codes. The API supports webhooks for instant push notifications when a code arrives, eliminating the need for constant polling. With generous rate limits and robust documentation featuring code examples in Python, JavaScript, PHP, and cURL, integration takes hours, not days. Built to handle thousands of requests per minute.</p>
                     </div>
                     <div class="card">
-                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--white);">Free Trial</h3>
+                        <h3 style="font-size: 24px; margin-bottom: 16px; color: var(--white);"><i class="fa-solid fa-gift"></i> Free Trial</h3>
                         <p style="font-size: 15px; color: var(--text-muted); line-height: 1.7;">We believe in the quality of our infrastructure, which is why we let you prove it to yourself before committing. Every new account is eligible for a free trial verification to test the platform. Create an account with just an email address — no credit card required. You'll gain access to the full dashboard and can execute a single SMS verification on supported platforms to experience our sub-20 second delivery speeds firsthand. Once you see how seamless the process is, you can easily top up your balance using crypto, credit card, or e-wallets to continue using the service.</p>
                     </div>
                 </div>
@@ -1107,22 +1123,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>WhatsApp</td><td>United States</td><td align="right">$0.15</td></tr>
-                            <tr><td>WhatsApp</td><td>India</td><td align="right">$0.10</td></tr>
-                            <tr><td>WhatsApp</td><td>United Kingdom</td><td align="right">$0.18</td></tr>
-                            <tr><td>Telegram</td><td>Russia</td><td align="right">$0.12</td></tr>
-                            <tr><td>Telegram</td><td>United States</td><td align="right">$0.20</td></tr>
-                            <tr><td>Google/Gmail</td><td>United States</td><td align="right">$0.25</td></tr>
-                            <tr><td>Google/Gmail</td><td>India</td><td align="right">$0.15</td></tr>
-                            <tr><td>Facebook</td><td>United States</td><td align="right">$0.14</td></tr>
-                            <tr><td>Instagram</td><td>United States</td><td align="right">$0.14</td></tr>
-                            <tr><td>TikTok</td><td>United States</td><td align="right">$0.16</td></tr>
-                            <tr><td>Discord</td><td>United States</td><td align="right">$0.12</td></tr>
-                            <tr><td>OpenAI/ChatGPT</td><td>United States</td><td align="right">$0.30</td></tr>
-                            <tr><td>Twitter/X</td><td>United States</td><td align="right">$0.18</td></tr>
-                            <tr><td>Amazon</td><td>United States</td><td align="right">$0.15</td></tr>
+                            <tr><td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td><td>United States</td><td align="right">$0.15</td></tr>
+                            <tr><td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td><td>India</td><td align="right">$0.10</td></tr>
+                            <tr><td><i class="fa-brands fa-whatsapp"></i> WhatsApp</td><td>United Kingdom</td><td align="right">$0.18</td></tr>
+                            <tr><td><i class="fa-brands fa-telegram"></i> Telegram</td><td>Russia</td><td align="right">$0.12</td></tr>
+                            <tr><td><i class="fa-brands fa-telegram"></i> Telegram</td><td>United States</td><td align="right">$0.20</td></tr>
+                            <tr><td><i class="fa-brands fa-google"></i> Google/Gmail</td><td>United States</td><td align="right">$0.25</td></tr>
+                            <tr><td><i class="fa-brands fa-google"></i> Google/Gmail</td><td>India</td><td align="right">$0.15</td></tr>
+                            <tr><td><i class="fa-brands fa-facebook"></i> Facebook</td><td>United States</td><td align="right">$0.14</td></tr>
+                            <tr><td><i class="fa-brands fa-instagram"></i> Instagram</td><td>United States</td><td align="right">$0.14</td></tr>
+                            <tr><td><i class="fa-brands fa-tiktok"></i> TikTok</td><td>United States</td><td align="right">$0.16</td></tr>
+                            <tr><td><i class="fa-brands fa-discord"></i> Discord</td><td>United States</td><td align="right">$0.12</td></tr>
+                            <tr><td><i class="fa-brands fa-x-twitter"></i> Twitter/X</td><td>United States</td><td align="right">$0.18</td></tr>
+                            <tr><td><i class="fa-solid fa-robot"></i> OpenAI/ChatGPT</td><td>United States</td><td align="right">$0.30</td></tr>
+                            <tr><td><i class="fa-brands fa-amazon"></i> Amazon</td><td>United States</td><td align="right">$0.15</td></tr>
+                            <tr><td><i class="fa-brands fa-uber"></i> Uber</td><td>United States</td><td align="right">$0.15</td></tr>
+                            <tr><td><i class="fa-solid fa-fire"></i> Tinder</td><td>United Kingdom</td><td align="right">$0.20</td></tr>
+                            <tr><td><i class="fa-solid fa-film"></i> Netflix</td><td>Germany</td><td align="right">$0.12</td></tr>
+                            <tr><td><i class="fa-brands fa-paypal"></i> PayPal</td><td>United States</td><td align="right">$0.25</td></tr>
+                            <tr><td><i class="fa-brands fa-airbnb"></i> Airbnb</td><td>France</td><td align="right">$0.18</td></tr>
+                            <tr><td><i class="fa-brands fa-linkedin"></i> LinkedIn</td><td>India</td><td align="right">$0.10</td></tr>
                             <tr style="border-top: 2px solid var(--border);">
-                                <td style="color: var(--white); font-weight: 600;">Any service</td>
+                                <td style="color: var(--white); font-weight: 600;"><i class="fa-solid fa-layer-group"></i> Any service</td>
                                 <td style="color: var(--white); font-weight: 600;">200+ countries</td>
                                 <td align="right" style="color: var(--green);">From $0.10</td>
                             </tr>
@@ -1145,38 +1167,38 @@
                         <tbody>
                             <tr>
                                 <td>United States</td>
-                                <td>$0.50</td>
-                                <td>$1.50</td>
-                                <td>$8.00</td>
-                                <td>$25.00</td>
+                                <td>$0.25</td>
+                                <td>$0.75</td>
+                                <td>$4.00</td>
+                                <td>$12.00</td>
                             </tr>
                             <tr>
                                 <td>United Kingdom</td>
-                                <td>$0.60</td>
-                                <td>$1.80</td>
-                                <td>$9.00</td>
-                                <td>$28.00</td>
+                                <td>$0.30</td>
+                                <td>$0.90</td>
+                                <td>$4.50</td>
+                                <td>$14.00</td>
                             </tr>
                             <tr>
                                 <td>India</td>
-                                <td>$0.30</td>
-                                <td>$0.90</td>
-                                <td>$5.00</td>
-                                <td>$15.00</td>
+                                <td>$0.15</td>
+                                <td>$0.45</td>
+                                <td>$2.50</td>
+                                <td>$7.50</td>
                             </tr>
                             <tr>
                                 <td>Germany</td>
-                                <td>$0.70</td>
-                                <td>$2.00</td>
-                                <td>$10.00</td>
-                                <td>$32.00</td>
+                                <td>$0.35</td>
+                                <td>$1.00</td>
+                                <td>$5.00</td>
+                                <td>$16.00</td>
                             </tr>
                             <tr style="border-top: 2px solid var(--border);">
                                 <td style="color: var(--white); font-weight: 600;">Other countries</td>
-                                <td style="color: var(--green);">From $0.30</td>
-                                <td style="color: var(--green);">From $0.80</td>
-                                <td style="color: var(--green);">From $4.00</td>
-                                <td style="color: var(--green);">From $12.00</td>
+                                <td style="color: var(--green);">From $0.15</td>
+                                <td style="color: var(--green);">From $0.40</td>
+                                <td style="color: var(--green);">From $2.00</td>
+                                <td style="color: var(--green);">From $6.00</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1186,10 +1208,10 @@
                     <h3 style="font-size: 24px; margin-bottom: 12px; color: var(--white);">Add Balance</h3>
                     <p style="font-size: 15px; color: var(--text-muted);">Minimum top-up is $1.00. No hidden fees or deposit charges.</p>
                     <div class="payment-methods">
-                        <div class="pay-pill">💳 Visa / Mastercard</div>
-                        <div class="pay-pill">₿ Cryptocurrency</div>
-                        <div class="pay-pill">🅿️ PayPal</div>
-                        <div class="pay-pill">🏦 Bank Transfer</div>
+                        <div class="pay-pill"><i class="fa-brands fa-cc-visa"></i> Visa / Mastercard</div>
+                        <div class="pay-pill"><i class="fa-brands fa-bitcoin"></i> Cryptocurrency</div>
+                        <div class="pay-pill"><i class="fa-brands fa-paypal"></i> PayPal</div>
+                        <div class="pay-pill"><i class="fa-solid fa-building-columns"></i> Bank Transfer</div>
                     </div>
                 </div>
             </section>
@@ -1344,7 +1366,7 @@
                   oninput="filterPlatforms(this.value)"
                   style="width:100%; padding:14px 20px 14px 48px; background:var(--surface); border:1px solid var(--border-green); border-radius:10px; color:var(--white); font-family:'DM Sans',sans-serif; font-size:15px; outline:none; box-sizing:border-box;"
                 />
-                <span style="position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--green); font-size:18px;">🔍</span>
+                <span style="position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--green); font-size:18px;"><i class="fa-solid fa-magnifying-glass"></i></span>
               </div>
             </div>
             
@@ -1352,280 +1374,280 @@
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  💬 Messaging & Social
+                  <i class="fa-solid fa-comments"></i> Messaging & Social
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">WhatsApp</span>
-                  <span class="platform-pill-elem">Telegram</span>
-                  <span class="platform-pill-elem">Facebook</span>
-                  <span class="platform-pill-elem">Instagram</span>
-                  <span class="platform-pill-elem">Twitter/X</span>
-                  <span class="platform-pill-elem">TikTok</span>
-                  <span class="platform-pill-elem">Snapchat</span>
-                  <span class="platform-pill-elem">Discord</span>
-                  <span class="platform-pill-elem">Signal</span>
-                  <span class="platform-pill-elem">Viber</span>
-                  <span class="platform-pill-elem">WeChat</span>
-                  <span class="platform-pill-elem">Line</span>
-                  <span class="platform-pill-elem">KakaoTalk</span>
-                  <span class="platform-pill-elem">Skype</span>
-                  <span class="platform-pill-elem">LinkedIn</span>
-                  <span class="platform-pill-elem">Pinterest</span>
-                  <span class="platform-pill-elem">Reddit</span>
-                  <span class="platform-pill-elem">Quora</span>
-                  <span class="platform-pill-elem">Tumblr</span>
-                  <span class="platform-pill-elem">VK</span>
-                  <span class="platform-pill-elem">Odnoklassniki</span>
-                  <span class="platform-pill-elem">MeWe</span>
-                  <span class="platform-pill-elem">Clubhouse</span>
-                  <span class="platform-pill-elem">BeReal</span>
-                  <span class="platform-pill-elem">Threads</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-whatsapp"></i> WhatsApp</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-telegram"></i> Telegram</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-facebook"></i> Facebook</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-instagram"></i> Instagram</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-x-twitter"></i> Twitter/X</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-tiktok"></i> TikTok</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-snapchat"></i> Snapchat</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-discord"></i> Discord</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-comment-dots"></i> Signal</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-viber"></i> Viber</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-weixin"></i> WeChat</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-line"></i> Line</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-comment"></i> KakaoTalk</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-skype"></i> Skype</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-pinterest"></i> Pinterest</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-reddit"></i> Reddit</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-quora"></i> Quora</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-tumblr"></i> Tumblr</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-vk"></i> VK</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-user-group"></i> Odnoklassniki</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-users"></i> MeWe</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-microphone"></i> Clubhouse</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-camera"></i> BeReal</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-threads"></i> Threads</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  🔵 Google & Microsoft
+                  <i class="fa-brands fa-google"></i> Google & Microsoft
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Google/Gmail</span>
-                  <span class="platform-pill-elem">Google Voice</span>
-                  <span class="platform-pill-elem">YouTube</span>
-                  <span class="platform-pill-elem">Google Play</span>
-                  <span class="platform-pill-elem">Android</span>
-                  <span class="platform-pill-elem">Microsoft/Outlook</span>
-                  <span class="platform-pill-elem">Microsoft Teams</span>
-                  <span class="platform-pill-elem">Xbox</span>
-                  <span class="platform-pill-elem">Hotmail</span>
-                  <span class="platform-pill-elem">Bing</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-google"></i> Google/Gmail</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-phone"></i> Google Voice</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-youtube"></i> YouTube</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-google-play"></i> Google Play</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-android"></i> Android</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-microsoft"></i> Microsoft/Outlook</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-users-rectangle"></i> Microsoft Teams</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-xbox"></i> Xbox</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-envelope"></i> Hotmail</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-magnifying-glass"></i> Bing</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  🤖 AI & Tech
+                  <i class="fa-solid fa-microchip"></i> AI & Tech
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">OpenAI/ChatGPT</span>
-                  <span class="platform-pill-elem">Claude/Anthropic</span>
-                  <span class="platform-pill-elem">Gemini</span>
-                  <span class="platform-pill-elem">Perplexity</span>
-                  <span class="platform-pill-elem">Midjourney</span>
-                  <span class="platform-pill-elem">Runway</span>
-                  <span class="platform-pill-elem">ElevenLabs</span>
-                  <span class="platform-pill-elem">Hugging Face</span>
-                  <span class="platform-pill-elem">GitHub</span>
-                  <span class="platform-pill-elem">GitLab</span>
-                  <span class="platform-pill-elem">Notion</span>
-                  <span class="platform-pill-elem">Airtable</span>
-                  <span class="platform-pill-elem">Zapier</span>
-                  <span class="platform-pill-elem">Figma</span>
-                  <span class="platform-pill-elem">Canva</span>
-                  <span class="platform-pill-elem">Replit</span>
-                  <span class="platform-pill-elem">Vercel</span>
-                  <span class="platform-pill-elem">Netlify</span>
-                  <span class="platform-pill-elem">DigitalOcean</span>
-                  <span class="platform-pill-elem">AWS</span>
-                  <span class="platform-pill-elem">Heroku</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-robot"></i> OpenAI/ChatGPT</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-brain"></i> Claude/Anthropic</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-google"></i> Gemini</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-magnifying-glass"></i> Perplexity</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-palette"></i> Midjourney</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-video"></i> Runway</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-wave-square"></i> ElevenLabs</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-face-smile"></i> Hugging Face</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-github"></i> GitHub</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-gitlab"></i> GitLab</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-book"></i> Notion</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-table"></i> Airtable</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bolt"></i> Zapier</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-figma"></i> Figma</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-pen-nib"></i> Canva</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-code"></i> Replit</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-caret-up"></i> Vercel</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-cubes"></i> Netlify</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-digital-ocean"></i> DigitalOcean</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-aws"></i> AWS</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-server"></i> Heroku</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  🛒 E-Commerce & Finance
+                  <i class="fa-solid fa-cart-shopping"></i> E-Commerce & Finance
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Amazon</span>
-                  <span class="platform-pill-elem">eBay</span>
-                  <span class="platform-pill-elem">Shopify</span>
-                  <span class="platform-pill-elem">Etsy</span>
-                  <span class="platform-pill-elem">AliExpress</span>
-                  <span class="platform-pill-elem">Alibaba</span>
-                  <span class="platform-pill-elem">Wish</span>
-                  <span class="platform-pill-elem">Mercari</span>
-                  <span class="platform-pill-elem">Poshmark</span>
-                  <span class="platform-pill-elem">PayPal</span>
-                  <span class="platform-pill-elem">Stripe</span>
-                  <span class="platform-pill-elem">Square</span>
-                  <span class="platform-pill-elem">Venmo</span>
-                  <span class="platform-pill-elem">Cash App</span>
-                  <span class="platform-pill-elem">Revolut</span>
-                  <span class="platform-pill-elem">Wise</span>
-                  <span class="platform-pill-elem">Payoneer</span>
-                  <span class="platform-pill-elem">Western Union</span>
-                  <span class="platform-pill-elem">MoneyGram</span>
-                  <span class="platform-pill-elem">Klarna</span>
-                  <span class="platform-pill-elem">Afterpay</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-amazon"></i> Amazon</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-ebay"></i> eBay</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-shopify"></i> Shopify</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-etsy"></i> Etsy</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bag-shopping"></i> AliExpress</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-box"></i> Alibaba</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-star"></i> Wish</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-store"></i> Mercari</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shirt"></i> Poshmark</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-paypal"></i> PayPal</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-stripe"></i> Stripe</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-square"></i> Square</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-v"></i> Venmo</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-money-bill-wave"></i> Cash App</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-r"></i> Revolut</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-money-check-dollar"></i> Wise</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-credit-card"></i> Payoneer</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-building-columns"></i> Western Union</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-money-bill-transfer"></i> MoneyGram</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-k"></i> Klarna</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tag"></i> Afterpay</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  ₿ Crypto & Web3
+                  <i class="fa-brands fa-bitcoin"></i> Crypto & Web3
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Binance</span>
-                  <span class="platform-pill-elem">Coinbase</span>
-                  <span class="platform-pill-elem">Kraken</span>
-                  <span class="platform-pill-elem">KuCoin</span>
-                  <span class="platform-pill-elem">OKX</span>
-                  <span class="platform-pill-elem">Bybit</span>
-                  <span class="platform-pill-elem">Gate.io</span>
-                  <span class="platform-pill-elem">Bitfinex</span>
-                  <span class="platform-pill-elem">Huobi</span>
-                  <span class="platform-pill-elem">Crypto.com</span>
-                  <span class="platform-pill-elem">MetaMask</span>
-                  <span class="platform-pill-elem">Trust Wallet</span>
-                  <span class="platform-pill-elem">Phantom</span>
-                  <span class="platform-pill-elem">Ledger</span>
-                  <span class="platform-pill-elem">OpenSea</span>
-                  <span class="platform-pill-elem">Rarible</span>
-                  <span class="platform-pill-elem">Magic Eden</span>
-                  <span class="platform-pill-elem">Uniswap</span>
-                  <span class="platform-pill-elem">dYdX</span>
-                  <span class="platform-pill-elem">1inch</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-coins"></i> Binance</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-wallet"></i> Coinbase</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-korvue"></i> Kraken</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-k"></i> KuCoin</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-o"></i> OKX</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-b"></i> Bybit</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-g"></i> Gate.io</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-b"></i> Bitfinex</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-h"></i> Huobi</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-c"></i> Crypto.com</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shield-dog"></i> MetaMask</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shield"></i> Trust Wallet</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-ghost"></i> Phantom</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-usb"></i> Ledger</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-ship"></i> OpenSea</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-r"></i> Rarible</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-wand-magic-sparkles"></i> Magic Eden</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-unicorn"></i> Uniswap</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-chart-line"></i> dYdX</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-1"></i> 1inch</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  🎬 Entertainment & Streaming
+                  <i class="fa-solid fa-film"></i> Entertainment & Streaming
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Netflix</span>
-                  <span class="platform-pill-elem">Spotify</span>
-                  <span class="platform-pill-elem">Apple Music</span>
-                  <span class="platform-pill-elem">YouTube Music</span>
-                  <span class="platform-pill-elem">Tidal</span>
-                  <span class="platform-pill-elem">Deezer</span>
-                  <span class="platform-pill-elem">SoundCloud</span>
-                  <span class="platform-pill-elem">Twitch</span>
-                  <span class="platform-pill-elem">Disney+</span>
-                  <span class="platform-pill-elem">Hulu</span>
-                  <span class="platform-pill-elem">HBO Max</span>
-                  <span class="platform-pill-elem">Amazon Prime</span>
-                  <span class="platform-pill-elem">Peacock</span>
-                  <span class="platform-pill-elem">Paramount+</span>
-                  <span class="platform-pill-elem">Apple TV+</span>
-                  <span class="platform-pill-elem">Crunchyroll</span>
-                  <span class="platform-pill-elem">Funimation</span>
-                  <span class="platform-pill-elem">Plex</span>
-                  <span class="platform-pill-elem">Steam</span>
-                  <span class="platform-pill-elem">Epic Games</span>
-                  <span class="platform-pill-elem">EA</span>
-                  <span class="platform-pill-elem">Ubisoft</span>
-                  <span class="platform-pill-elem">Roblox</span>
-                  <span class="platform-pill-elem">Minecraft</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-film"></i> Netflix</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-spotify"></i> Spotify</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-apple"></i> Apple Music</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-youtube"></i> YouTube Music</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-music"></i> Tidal</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-deezer"></i> Deezer</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-soundcloud"></i> SoundCloud</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-twitch"></i> Twitch</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tv"></i> Disney+</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tv"></i> Hulu</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tv"></i> HBO Max</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-amazon"></i> Amazon Prime</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tv"></i> Peacock</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tv"></i> Paramount+</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-apple"></i> Apple TV+</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-video"></i> Crunchyroll</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-play"></i> Funimation</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-play"></i> Plex</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-steam"></i> Steam</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-gamepad"></i> Epic Games</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-gamepad"></i> EA</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-gamepad"></i> Ubisoft</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-cube"></i> Roblox</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-cubes"></i> Minecraft</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  ❤️ Dating & Lifestyle
+                  <i class="fa-solid fa-heart"></i> Dating & Lifestyle
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Tinder</span>
-                  <span class="platform-pill-elem">Bumble</span>
-                  <span class="platform-pill-elem">Hinge</span>
-                  <span class="platform-pill-elem">Badoo</span>
-                  <span class="platform-pill-elem">OkCupid</span>
-                  <span class="platform-pill-elem">Match</span>
-                  <span class="platform-pill-elem">Plenty of Fish</span>
-                  <span class="platform-pill-elem">Grindr</span>
-                  <span class="platform-pill-elem">Her</span>
-                  <span class="platform-pill-elem">Feeld</span>
-                  <span class="platform-pill-elem">eHarmony</span>
-                  <span class="platform-pill-elem">Zoosk</span>
-                  <span class="platform-pill-elem">MeetMe</span>
-                  <span class="platform-pill-elem">Tagged</span>
-                  <span class="platform-pill-elem">Happn</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-fire"></i> Tinder</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> Bumble</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-h"></i> Hinge</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-user-group"></i> Badoo</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> OkCupid</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> Match</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-fish"></i> Plenty of Fish</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-mask"></i> Grindr</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-venus"></i> Her</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> Feeld</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> eHarmony</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-heart"></i> Zoosk</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-users"></i> MeetMe</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-tag"></i> Tagged</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-location-dot"></i> Happn</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  🚗 Transport & Delivery
+                  <i class="fa-solid fa-car"></i> Transport & Delivery
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Uber</span>
-                  <span class="platform-pill-elem">Lyft</span>
-                  <span class="platform-pill-elem">DoorDash</span>
-                  <span class="platform-pill-elem">Grubhub</span>
-                  <span class="platform-pill-elem">Uber Eats</span>
-                  <span class="platform-pill-elem">Instacart</span>
-                  <span class="platform-pill-elem">Postmates</span>
-                  <span class="platform-pill-elem">Gopuff</span>
-                  <span class="platform-pill-elem">Airbnb</span>
-                  <span class="platform-pill-elem">Booking.com</span>
-                  <span class="platform-pill-elem">Expedia</span>
-                  <span class="platform-pill-elem">Hotels.com</span>
-                  <span class="platform-pill-elem">Kayak</span>
-                  <span class="platform-pill-elem">Skyscanner</span>
-                  <span class="platform-pill-elem">VRBO</span>
-                  <span class="platform-pill-elem">TripAdvisor</span>
-                  <span class="platform-pill-elem">Lime</span>
-                  <span class="platform-pill-elem">Bird</span>
-                  <span class="platform-pill-elem">Bolt</span>
-                  <span class="platform-pill-elem">Grab</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-uber"></i> Uber</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-lyft"></i> Lyft</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bag-shopping"></i> DoorDash</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-utensils"></i> Grubhub</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-uber"></i> Uber Eats</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-carrot"></i> Instacart</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-motorcycle"></i> Postmates</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bag-shopping"></i> Gopuff</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-airbnb"></i> Airbnb</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bed"></i> Booking.com</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-plane"></i> Expedia</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-hotel"></i> Hotels.com</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-plane-departure"></i> Kayak</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-plane"></i> Skyscanner</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-house"></i> VRBO</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-suitcase"></i> TripAdvisor</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bolt"></i> Lime</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-crow"></i> Bird</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bolt"></i> Bolt</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-car"></i> Grab</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  📧 Email & Productivity
+                  <i class="fa-solid fa-envelope"></i> Email & Productivity
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">ProtonMail</span>
-                  <span class="platform-pill-elem">Tutanota</span>
-                  <span class="platform-pill-elem">Zoho Mail</span>
-                  <span class="platform-pill-elem">Yahoo Mail</span>
-                  <span class="platform-pill-elem">iCloud</span>
-                  <span class="platform-pill-elem">Apple ID</span>
-                  <span class="platform-pill-elem">Dropbox</span>
-                  <span class="platform-pill-elem">Google Drive</span>
-                  <span class="platform-pill-elem">OneDrive</span>
-                  <span class="platform-pill-elem">Box</span>
-                  <span class="platform-pill-elem">Slack</span>
-                  <span class="platform-pill-elem">Asana</span>
-                  <span class="platform-pill-elem">Monday.com</span>
-                  <span class="platform-pill-elem">Trello</span>
-                  <span class="platform-pill-elem">ClickUp</span>
-                  <span class="platform-pill-elem">Basecamp</span>
-                  <span class="platform-pill-elem">Jira</span>
-                  <span class="platform-pill-elem">Confluence</span>
-                  <span class="platform-pill-elem">Zoom</span>
-                  <span class="platform-pill-elem">Google Meet</span>
-                  <span class="platform-pill-elem">Calendly</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-envelope"></i> ProtonMail</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-envelope"></i> Tutanota</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-envelope"></i> Zoho Mail</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-yahoo"></i> Yahoo Mail</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-cloud"></i> iCloud</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-apple"></i> Apple ID</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-dropbox"></i> Dropbox</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-google-drive"></i> Google Drive</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-cloud"></i> OneDrive</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-box"></i> Box</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-slack"></i> Slack</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-list-check"></i> Asana</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-calendar"></i> Monday.com</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-trello"></i> Trello</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-check-double"></i> ClickUp</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-campground"></i> Basecamp</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-jira"></i> Jira</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-confluence"></i> Confluence</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-video"></i> Zoom</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-video"></i> Google Meet</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-calendar-days"></i> Calendly</span>
                 </div>
               </div>
               
               <div class="platform-category" style="margin-bottom:48px;">
                 <h2 style="font-family:'Space Grotesk',sans-serif; font-size:22px; color:var(--white); margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border);">
-                  ⚡ And Many More
+                  <i class="fa-solid fa-bolt"></i> And Many More
                 </h2>
                 <div class="platform-pills">
-                  <span class="platform-pill-elem">Duolingo</span>
-                  <span class="platform-pill-elem">Coursera</span>
-                  <span class="platform-pill-elem">Udemy</span>
-                  <span class="platform-pill-elem">Skillshare</span>
-                  <span class="platform-pill-elem">Khan Academy</span>
-                  <span class="platform-pill-elem">Glassdoor</span>
-                  <span class="platform-pill-elem">Indeed</span>
-                  <span class="platform-pill-elem">LinkedIn Jobs</span>
-                  <span class="platform-pill-elem">Fiverr</span>
-                  <span class="platform-pill-elem">Upwork</span>
-                  <span class="platform-pill-elem">Freelancer</span>
-                  <span class="platform-pill-elem">Toptal</span>
-                  <span class="platform-pill-elem">AngelList</span>
-                  <span class="platform-pill-elem">Craigslist</span>
-                  <span class="platform-pill-elem">Facebook Marketplace</span>
-                  <span class="platform-pill-elem">OfferUp</span>
-                  <span class="platform-pill-elem">Letgo</span>
-                  <span class="platform-pill-elem">Depop</span>
-                  <span class="platform-pill-elem">Vinted</span>
-                  <span class="platform-pill-elem">ThredUp</span>
-                  <span class="platform-pill-elem">StockX</span>
-                  <span class="platform-pill-elem">GOAT</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-language"></i> Duolingo</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-graduation-cap"></i> Coursera</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-graduation-cap"></i> Udemy</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-graduation-cap"></i> Skillshare</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-graduation-cap"></i> Khan Academy</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Glassdoor</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Indeed</span>
+                  <span class="platform-pill-elem"><i class="fa-brands fa-linkedin"></i> LinkedIn Jobs</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Fiverr</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Upwork</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Freelancer</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> Toptal</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-briefcase"></i> AngelList</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-bullhorn"></i> Craigslist</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-store"></i> Facebook Marketplace</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-store"></i> OfferUp</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-store"></i> Letgo</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shirt"></i> Depop</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shirt"></i> Vinted</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shirt"></i> ThredUp</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shoe-prints"></i> StockX</span>
+                  <span class="platform-pill-elem"><i class="fa-solid fa-shoe-prints"></i> GOAT</span>
                 </div>
               </div>
               
@@ -1729,17 +1751,17 @@
 
                 <div class="grid-3 fade-in" style="margin-bottom: 80px;">
                     <div class="card">
-                        <div class="f-icon blue" style="margin-bottom: 16px;">⚡</div>
+                        <div class="f-icon blue" style="margin-bottom: 16px;"><i class="fa-solid fa-bolt" style="margin: 0;"></i></div>
                         <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--white);">Speed</h3>
                         <p style="font-size: 14px; color: var(--text-muted);">We measure delivery in seconds, not minutes. Direct routing ensures OTPs hit your dashboard instantly.</p>
                     </div>
                     <div class="card">
-                        <div class="f-icon green" style="margin-bottom: 16px;">🔒</div>
+                        <div class="f-icon green" style="margin-bottom: 16px;"><i class="fa-solid fa-lock" style="margin: 0;"></i></div>
                         <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--white);">Privacy</h3>
                         <p style="font-size: 14px; color: var(--text-muted);">Zero PII required. We do not track verification content beyond the session lifecycle.</p>
                     </div>
                     <div class="card">
-                        <div class="f-icon blue" style="margin-bottom: 16px;">🛡️</div>
+                        <div class="f-icon blue" style="margin-bottom: 16px;"><i class="fa-solid fa-shield-halved" style="margin: 0;"></i></div>
                         <h3 style="font-size: 20px; margin-bottom: 12px; color: var(--white);">Reliability</h3>
                         <p style="font-size: 14px; color: var(--text-muted);">Our inventory is actively monitored and rotated to maintain a 95%+ success rate against all spam filters.</p>
                     </div>
@@ -1818,7 +1840,7 @@
                             <button type="submit" class="btn btn-primary btn-block">Send Message →</button>
                         </form>
                         <div id="contact-success" style="display: none; text-align: center; padding: 20px;">
-                            <div style="font-size: 40px; color: var(--green); margin-bottom: 16px;">✓</div>
+                            <div style="font-size: 40px; color: var(--green); margin-bottom: 16px;"><i class="fa-solid fa-check"></i></div>
                             <h3 style="margin-bottom: 8px;">Message Sent</h3>
                             <p style="color: var(--text-muted);">Thank you, <span id="cs-name"></span>. We'll reply to <span id="cs-email" style="color:var(--white)"></span> shortly.</p>
                         </div>
